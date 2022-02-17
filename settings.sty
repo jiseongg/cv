@@ -1,0 +1,97 @@
+
+% biblatex
+\usepackage[backend=bibtex,maxnames=99]{biblatex}
+\addbibresource{refs.bib}
+\DeclareFieldFormat{labelnumberwidth}{\mkbibbold{#1\adddot}}
+
+\newcommand{\myname}[2]{%
+   \def\@mylastname{#1}%
+   \def\@myfirstname{#2}%
+}
+
+\renewcommand*{\mkbibnamefamily}[1]{%
+  \ifboolexpr{ test {\ifdefstrequal{\namepartfamily}{\@mylastname}}
+               and
+               test {\ifdefstrequal{\namepartgiven}{\@myfirstname}}}
+    {\textbf{#1}}%
+    {#1}%
+}
+
+\renewcommand*{\mkbibnamegiven}[1]{%
+  \ifboolexpr{ test {\ifdefstrequal{\namepartfamily}{\@mylastname}}
+               and
+               test {\ifdefstrequal{\namepartgiven}{\@myfirstname}}}
+    {\textbf{#1}}%
+    {#1}%
+}
+
+\myname{Bak}{Jiseong}
+
+% moderncv
+\moderncvstyle{classic}   
+\moderncvcolor{black}
+\nopagenumbers{}
+
+\renewcommand*{\sectionstyle}[1]{{\sectionfont\textcolor{color1}{#1}}}
+\renewcommand*{\namefont}{\fontsize{30}{}\mdseries\upshape}
+
+\newcommand*{\customcventry}[7][.25em]{
+  \begin{tabular}{@{}l} 
+    {\bfseries #4}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\bfseries #5}
+  \end{tabular} \\
+  \begin{tabular}{@{}l} 
+    {\itshape #3}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #2}
+  \end{tabular}
+  \ifx&#7&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#7%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\newcommand*{\customcvproject}[4][.25em]{
+%   \vfill\noindent
+  \begin{tabular}{@{}l} 
+    {\bfseries #2}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #3}
+  \end{tabular}
+  \ifx&#4&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#4%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\setlength{\tabcolsep}{12pt}
+
+% character encoding
+\usepackage[utf8]{inputenc}
+\usepackage{fontawesome}
+\usepackage{changepage}
+\usepackage{amssymb}
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\usepackage{multicol}
+
+% url
+\PassOptionsToPackage{hyphens}{url}
+
+% section style
+\usepackage{titlesec}
+\titleformat{\section}
+  {\normalfont\LARGE\mdseries}{\thesection}{1em}{}[{\titlerule[0.4pt]}]
+
+% misc.
+\usepackage{microtype}
