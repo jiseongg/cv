@@ -1,5 +1,5 @@
 
-\documentclass[11pt,a4paper,roman]{moderncv}
+\documentclass[10pt,a4paper,roman]{moderncv}
 
 % settings.sty
 \usepackage{settings}
@@ -18,14 +18,16 @@ Department of Computer Science and Engineering \\
 College of Informatics, Korea University \\
 \end{minipage}
 
-\begin{adjustwidth}{-0.2cm}{}
-\begin{tabular}{ P{7mm}@{:} l P{7mm}@{:} l }
-  \faEnvelopeO & \ \texttt{jiseongg301@gmail.com} & \faEnvelopeO & \ \texttt{js\_bak@korea.ac.kr} \\
-  \faGithub & \ \url{https://github.com/jiseongg} & \faLinkedin & \ \url{https://linkedin.com/in/js-bak/}
-\end{tabular}
+\begin{adjustwidth}{-0.4cm}{}
+  {\footnotesize
+    \begin{tabular}{ P{6mm}@{:} l P{6mm}@{:} l }
+      \faEnvelopeO & \ \texttt{jiseongg301@gmail.com} & \faEnvelopeO & \ \texttt{js\_bak@korea.ac.kr} \\
+      \faGithub & \ \url{https://github.com/jiseongg} & \faLinkedin & \ \url{https://linkedin.com/in/js-bak/}
+    \end{tabular}
+  }
 \end{adjustwidth}
 
-\vspace{4mm}
+\vspace{7mm}
 
 \input{research-interests}
 \input{education}
@@ -33,5 +35,6 @@ College of Informatics, Korea University \\
 \input{research-projects}
 \input{publications}
 
+\cfoot{\thepage}
 \end{document}
 

@@ -30,10 +30,9 @@
 % moderncv
 \moderncvstyle{classic}   
 \moderncvcolor{black}
-\nopagenumbers{}
 
 \renewcommand*{\sectionstyle}[1]{{\sectionfont\textcolor{color1}{#1}}}
-\renewcommand*{\namefont}{\fontsize{30}{}\mdseries\upshape}
+\renewcommand*{\namefont}{\fontsize{20}{20}\mdseries\upshape}
 
 \newcommand*{\customcventry}[7][.25em]{
   \begin{tabular}{@{}l} 
@@ -58,7 +57,6 @@
   \par\addvspace{#1}}
 
 \newcommand*{\customcvproject}[4][.25em]{
-%   \vfill\noindent
   \begin{tabular}{@{}l} 
     {\bfseries #2}
   \end{tabular}
@@ -83,6 +81,13 @@
 
 % adjust the page margins
 \usepackage[scale=0.8]{geometry}
+\geometry {
+  left=3.6cm,
+  right=3.6cm
+}
+
+% pagination
+\pagestyle{plain}
 
 % url
 \PassOptionsToPackage{hyphens}{url}
@@ -90,7 +95,8 @@
 % section style
 \usepackage{titlesec}
 \titleformat{\section}
-  {\normalfont\LARGE\mdseries}{\thesection}{1em}{}[{\titlerule[0.4pt]}]
+  {\normalfont\fontsize{15}{15}\mdseries}{\thesection}{1em}{}[{\titlerule[0.4pt]}]
+\titlespacing*{\section}{0pt}{1mm}{1mm}
 
 % misc.
 \usepackage{microtype}
