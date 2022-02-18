@@ -34,27 +34,26 @@
 \renewcommand*{\sectionstyle}[1]{{\sectionfont\textcolor{color1}{#1}}}
 \renewcommand*{\namefont}{\fontsize{20}{20}\mdseries\upshape}
 
-\newcommand*{\customcventry}[7][.25em]{
+\newcommand*{\educationentry}[5]{
   \begin{tabular}{@{}l} 
-    {\bfseries #4}
+    {\bfseries #3}
   \end{tabular}
   \hfill% move it to the right
   \begin{tabular}{l@{}}
-     {\bfseries #5}
+     {\bfseries #4}
   \end{tabular} \\
   \begin{tabular}{@{}l} 
-    {\itshape #3}
+    {#2 %
+      \ifx$#5$%
+      \else{ (Advisor: #5)}%
+      \fi%
+    }
   \end{tabular}
   \hfill% move it to the right
   \begin{tabular}{l@{}}
-     {\itshape #2}
+     {\itshape #1}
   \end{tabular}
-  \ifx&#7&%
-  \else{\\%
-    \begin{minipage}{\maincolumnwidth}%
-      \small#7%
-    \end{minipage}}\fi%
-  \par\addvspace{#1}}
+  \par\addvspace{0.25em}}
 
 \newcommand*{\customcvproject}[4][.25em]{
   \begin{tabular}{@{}l} 
