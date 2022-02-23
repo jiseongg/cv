@@ -1,4 +1,5 @@
 ## Build command
 ```shell
-make -k
+NAME=<NAME> make -k
+# e.g. NAME=Jiseong_Bak make -k
 ```
