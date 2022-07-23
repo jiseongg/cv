@@ -34,7 +34,7 @@
 \renewcommand*{\sectionstyle}[1]{{\sectionfont\textcolor{color1}{#1}}}
 \renewcommand*{\namefont}{\fontsize{20}{20}\mdseries\upshape}
 
-\newcommand*{\educationentry}[5]{
+\newcommand*{\educationentry}[6]{
   \begin{tabular}{@{}l} 
     {\bfseries #3}
   \end{tabular}
@@ -45,7 +45,7 @@
   \begin{tabular}{@{}l} 
     {#2 %
       \ifx$#5$%
-      \else{ (Advisor: #5)}%
+      \else{ (Advisor: \textbf{{\href{#6}{#5}}}) }%
       \fi%
     }
   \end{tabular}
