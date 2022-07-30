@@ -55,20 +55,20 @@
   \end{tabular}
   \par\addvspace{0.25em}}
 
-\newcommand*{\customcvproject}[4][.25em]{
-  \begin{tabular}{@{}l} 
-    {\bfseries #2}
+\newcommand*{\talkentry}[5]{
+  \begin{tabular}{@{}p{0.7\textwidth}} 
+    \textbf{#1}
   \end{tabular}
   \hfill% move it to the right
-  \begin{tabular}{l@{}}
-     {\itshape #3}
+  \begin{tabular}{r@{}}
+    \itshape #2 \\
+    \itshape #3
   \end{tabular}
-  \ifx&#4&%
-  \else{\\%
-    \begin{minipage}{\maincolumnwidth}%
-      \small#4%
-    \end{minipage}}\fi%
-  \par\addvspace{#1}}
+  \par\addvspace{0.25em}
+  \begin{tabular}{@{}l} 
+    \footnotesize \textsc{#4 presentor for <#5>}
+  \end{tabular}
+  \par\addvspace{0.25em}}
 
 \setlength{\tabcolsep}{12pt}
 
