@@ -21,4 +21,4 @@ ifndef NAME
 endif
 
 clean:
-	rm -f *.blg *.bbl *.aux *.log *.dvi *.out *.pdf *.synctex* *.fdb_latexmk *.pdfsync
+	rm -f *.blg *.bbl *.aux *.log *.dvi *.out *.pdf *.synctex* *.fdb_latexmk *.pdfsync *.run.xml *.fls *-blx.bib 
